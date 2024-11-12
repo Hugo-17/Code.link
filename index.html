@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>code.link</title>
+  <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div id="app">
+    <section>
+      <div class="content">
+        <div class="cell a">
+          <textarea id="html" placeholder="html"></textarea>
+        </div>
+
+        <div class="cell b">
+          <textarea id="css" placeholder="css"></textarea>
+        </div>
+
+        <div class="cell c">
+          <textarea id="js" placeholder="js"></textarea>
+        </div>
+        <div class="cell d">
+          <iframe srcdoc=""></iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="/main.js"></script>
+  
+  <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
+    <script>
+    Split(['.a', '.b','.c','.d'], {
+    gutterSize: 5,
+    sizes: 0,
+    minSize: 0,
+    snapOffset: 30,
+});
+    </script>
+</body>
+</html>
