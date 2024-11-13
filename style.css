@@ -1,9 +1,10 @@
 /* Fuentes y colores */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
+html, body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 * {
@@ -43,6 +44,37 @@ textarea {
     outline: none;
     resize: none;
     padding: 20px 0 20px 10px;
+}
+
+#html{
+    background-image: url(public/html.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) calc(100% - 20px);
+}
+#css{
+    background-image: url(public/css.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) calc(100% - 20px)
+}
+#js{
+    background-image: url(public/js.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) calc(100% - 20px);
+}
+
+@media only screen and (max-height: 200px) {
+    #html{
+        background-image: none;
+    }
+    #css{
+        background-image: none;
+    }
+    #js{
+        background-image: none;
+    }
 }
 
 .gutter {
