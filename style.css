@@ -41,16 +41,16 @@ textarea {
     border: none;
     color: #fff;
     outline: none;
-    resize: both;
+    resize: none;
+    padding: 20px 0 20px 10px;
 }
 
 .gutter {
     cursor: col-resize;
-    background-color: #000;
+    background-color: #424242;
     background-repeat: no-repeat;
     background-position: 50%;
 }
 .gutter.gutter-horizontal {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
     cursor: col-resize;
 }
