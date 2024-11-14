@@ -43,6 +43,7 @@ textarea {
     color: #fff;
     outline: none;
     resize: none;
+    position: relative;
     padding: 20px 0 20px 10px;
     background-size: 40px;
     background-repeat: no-repeat;
@@ -52,11 +53,25 @@ textarea {
 #html{
     background-image: url(public/html.png);
 }
+
+#html:hover, #html:focus{
+    background-image: url(public/html-transparent.png);
+}
+
 #css{
     background-image: url(public/css.png);
 }
+
+#css:hover, #css:focus{
+    background-image: url(public/css-transparent.png);
+}
+
 #js{
     background-image: url(public/js.png);
+}
+
+#js:hover,#js:focus {
+    background-image: url(public/js-transparent.png);
 }
 
 @media only screen and (max-height: 200px) {
