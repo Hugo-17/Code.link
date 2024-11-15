@@ -1,4 +1,5 @@
 import './style.css'
+import * as monaco from 'monaco-editor';
 
 const $ = selector => document.querySelector(selector);
 
@@ -16,9 +17,9 @@ function update() {
 }
 
 const createHTML = () => {
-    const html = $html.value;
-    const css = $css.value;
-    const js = $js.value;
+    const html = html_editor.getValue();
+    const css = css_editor.getValue()
+    const js = js_editor.getValue();
 
     return `
     <!doctype html>
@@ -37,3 +38,39 @@ const createHTML = () => {
     </html>
     `
 }
+
+
+const html_editor = monaco.editor.create($html, {
+    value: "",
+    language: 'html',
+    automaticLayout: true,
+    lineNumbers: "off",
+    minimap: {enabled: false},
+    padding: { top: 12, right: 15, bottom: 12, left: 15 },
+    overviewRulerLanes: 0,
+    overviewRulerBorder: false,
+    theme: 'vs-dark'
+});
+
+const css_editor = monaco.editor.create($css, {
+    value: "",
+    language: 'css',
+    automaticLayout: true,
+    lineNumbers: "off",
+    minimap: {enabled: false},
+    padding: { top: 12, right: 15, bottom: 12, left: 15 },
+    overviewRulerLanes: 0,
+    overviewRulerBorder: false,
+    theme: 'vs-dark'
+});
+const js_editor = monaco.editor.create($js, {
+    value: "",
+    language: 'javascript',
+    automaticLayout: true,
+    lineNumbers: "off",
+    minimap: {enabled: false},
+    padding: { top: 12, right: 15, bottom: 12, left: 15 },
+    overviewRulerLanes: 0,
+    overviewRulerBorder: false,
+    theme: 'vs-dark'
+});
