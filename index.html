@@ -30,13 +30,29 @@
   <script type="module" src="/main.js"></script>
   
   <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
-    <script>
-    Split(['.a', '.b','.c','.d'], {
-    gutterSize: 10,
-    sizes: 0,
-    minSize: 0,
-    snapOffset: 20,
-});
-    </script>
+  <script>
+    //Initialize Split.js
+    var splitInstance = Split(['.a', '.b', '.c', '.d'], {
+      gutterSize: 10,
+      minSize: 0,
+      snapOffset: 20,
+      onDrag: function(){
+        // Get the current size
+        var currentSizes = splitInstance.getSizes();
+        // Function to update padding
+        function updatePadding(selector, size) {
+          const element = document.querySelector(selector);
+          if(element) {
+            element.style.padding = size <= 3 ? 0 : '20px';
+          }
+        }
+        // Update padding for each element
+        updatePadding('#html', currentSizes[0])
+        updatePadding('#css', currentSizes[1])
+        updatePadding('#js', currentSizes[2])
+      }
+    });
+    
+  </script>
 </body>
 </html>
