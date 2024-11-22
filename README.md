@@ -37,15 +37,21 @@ Una vez iniciado el servidor de desarrollo, abre tu navegador y navega a http://
 
 ¡Nos encanta recibir contribuciones! Si deseas mejorar Code-Pen, sigue estos pasos:
 
-Fork el repositorio.
+1. **Fork el repositorio**.
 
-Crea una nueva rama para tu funcionalidad (git checkout -b feature/nueva-funcionalidad).
+2. **Crea una nueva rama para tu funcionalidad**:
+   ```sh
+   git checkout -b feature/nueva-funcionalidad
 
-Realiza tus cambios y haz commit (git commit -m 'Añadir nueva funcionalidad').
+3. **Realiza tus cambios y haz commit**:
+   ```sh
+   git commit -m 'Añadir nueva funcionalidad'
 
-Push a la rama (git push origin feature/nueva-funcionalidad).
+5. **Push a la rama**:
+   ```sh
+   git push origin feature/nueva-funcionalidad
 
-Abre una Pull Request.
+7. **Abre una Pull Request**.
 
 ## Licencia
 
